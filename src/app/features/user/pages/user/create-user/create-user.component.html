@@ -1,0 +1,28 @@
+<!-- create-user.component.html -->
+<mat-card>
+    <mat-card-header>
+        <mat-card-title class="pb-2">สร้างผู้ใช้งานใหม่</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="createUserForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-auto">
+                    <mat-form-field appearance="outline">
+                        <mat-label>ชื่อผู้ใช้งาน</mat-label>
+                        <input matInput formControlName="firstname" />
+                        <mat-error
+                            *ngIf="createUserForm.get('firstname')?.hasError('required')">กรุณากรอกชื่อผู้ใช้งาน</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-auto">
+                    <mat-form-field appearance="outline">
+                        <mat-label>อีเมล</mat-label>
+                        <input matInput formControlName="email" />
+                        <mat-error *ngIf="createUserForm.get('email')?.hasError('required')">กรุณากรอกอีเมล</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <button class="mt-2" mat-raised-button type="submit" [disabled]="createUserForm.invalid">สร้าง</button>
+        </form>
+    </mat-card-content>
+</mat-card>

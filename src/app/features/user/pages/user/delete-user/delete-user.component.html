@@ -1,0 +1,12 @@
+<!-- delete-user.component.html -->
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>ลบผู้ใช้งาน</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>คุณต้องการลบผู้ใช้งานนี้หรือไม่?</p>
+      <button mat-raised-button (click)="onDelete()" color="warn">ลบ</button>
+      <button mat-raised-button routerLink="/user/list">ยกเลิก</button>
+    </mat-card-content>
+  </mat-card>
+  

@@ -1,0 +1,25 @@
+<!-- edit-user.component.html -->
+<mat-card>
+    <mat-card-header>
+        <mat-card-title class="pb-2">แก้ไขข้อมูลผู้ใช้งาน</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="editUserForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-auto">
+                    <mat-form-field appearance="outline">
+                        <mat-label>ชื่อผู้ใช้งาน</mat-label>
+                        <input matInput formControlName="firstname" />
+                    </mat-form-field>
+                </div>
+                <div class="col-auto">
+                    <mat-form-field appearance="outline">
+                        <mat-label>อีเมล</mat-label>
+                        <input matInput formControlName="email" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <button class="mt-2" mat-raised-button type="submit" [disabled]="editUserForm.invalid">บันทึก</button>
+        </form>
+    </mat-card-content>
+</mat-card>

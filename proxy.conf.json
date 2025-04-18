@@ -1,0 +1,15 @@
+{
+  "/api": {
+    "target": "http://localhost:1444",  
+    "secure": false,                  
+    "changeOrigin": true,            
+    "logLevel": "debug",    
+    "headers": {
+      "x-test-token": "test0804" 
+    },
+    "pathRewrite": { 
+      "^/api": ""          
+
+    }
+  }
+}
